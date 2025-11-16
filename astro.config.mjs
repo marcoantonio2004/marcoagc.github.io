@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://marcoantonio2004.github.io',
-  base: '/marcoagc/',
+  base: '/',   // <<< CORREGIDO
 
   integrations: [
     tailwind({
