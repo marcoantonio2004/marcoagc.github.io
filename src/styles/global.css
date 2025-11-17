@@ -22,21 +22,27 @@
 }
 
 /* ──────────────────────────────── */
-/* Estilos globales adicionales     */
+/* Estilos globales mejorados       */
 /* ──────────────────────────────── */
 
-/* Imágenes con sombra suave */
+/* Imágenes: sombra suave, zoom y elevación */
 .site-img {
-  @apply rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+  @apply rounded-xl shadow-lg transition-all duration-300 ease-out;
+  transform: scale(1);
 }
 
-/* Transición global de tema */
+.site-img:hover {
+  transform: scale(1.05);
+  @apply shadow-2xl;
+}
+
+/* Transición global del tema */
 html {
   transition: background-color var(--transition-slow),
               color var(--transition-slow);
 }
 
-/* Animación suave para los links */
+/* Links con animación mejorada */
 a {
   transition: opacity var(--transition-base),
               color var(--transition-base),
@@ -45,7 +51,7 @@ a {
 
 a:hover {
   opacity: 0.85;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* Suavidad entre páginas */
@@ -53,10 +59,15 @@ main {
   animation: fadeIn 0.45s ease-out;
 }
 
+/* Texto justificado */
 p {
   text-align: justify;
 }
 
+/* Listas más elegantes */
+ul {
+  @apply leading-relaxed;
+}
 
 /* ──────────────────────────────── */
 /* Animaciones                      */
@@ -71,4 +82,3 @@ p {
     transform: translateY(0);
   }
 }
-
